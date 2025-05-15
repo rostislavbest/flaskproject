@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>Document</title>
+  <style>
+
+
+
+    
+  </style>
+</head>
+<body>
+  {% if num >= 101  %}
+<h1>Ваше число більше 100</h1>
+
+{% else %}
+  <h1>Ваше число менше 100</h1>
+
+   {% endif %}
+
+
+
+<h1>Учасники</h1>
+<div class  = 'block'>
+  {% if  data_main %}
+{% for user in data_main %}
+<div class = 'item'>
+<h5>Імя - {{user.name}}</h5>
+<h5>Вік - {{user.age}}</h5>
+<h5>Колір - {{user.color}}</h5>
+<a href = "{{url_for('del_data',id = user.id)}}">видалити</a>
+</div>
+{% endfor %}
+
+
+
+
+{%else%}
+<h1>немає учасників</h1>
+{% endif%}
+</div>
+<a href = "{{ url_for('about') }}" > перейти на іншу сторінку</a>
+</body>
+</html>

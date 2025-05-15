@@ -40,3 +40,11 @@ if __name__ == "__main__":
 
 
 
+# git init
+# git add .
+# git commit -m "initial commit"
+# 
+
+# git branch -M main
+# git remote add origin https://github.com/ТВОЄ_ІМ'Я/my-flask-app.git
+# git push -u origin main
